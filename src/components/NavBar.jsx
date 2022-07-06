@@ -4,8 +4,9 @@ import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
+import CartWidget from "./CartWidget";
 
-function NavTiendita() {
+function NavBar() {
   return (
     <Navbar bg="light" expand="lg">
       <Container fluid>
@@ -39,10 +40,15 @@ function NavTiendita() {
             />
             <Button variant="outline-success">Search</Button>
           </Form>
+          <Nav className="d-flex">
+            <Nav.Link href="#">
+              <CartWidget />
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
 
-export default NavTiendita;
+export default NavBar;
