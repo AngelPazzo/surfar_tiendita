@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Button from "react-bootstrap/esm/Button";
 
-const ItemCount = () => {
+const ItemCount = ({ stock, initial }) => {
   let [count, setCount] = useState(0);
-  let stock = 10;
+
   return (
     <>
       <Button
