@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Cleveland",
+    "price": 104,
+    "category": "Table",
+    "stock": 6,
+    "image": "/img/tabla1.png"
+  },
+  {
+    "id": 2,
+    "title": "Jana",
+    "price": 935,
+    "category": "Table",
+    "stock": 1,
+    "image": "/img/tabla2.png"
+  },
+  {
+    "id": 3,
+    "title": "Nanni",
+    "price": 541,
+    "category": "Table",
+    "stock": 9,
+    "image": "/img/tabla3.png"
+  },
+  {
+    "id": 4,
+    "title": "Loralyn",
+    "price": 817,
+    "category": "Table",
+    "stock": 2,
+    "image": "/img/tabla4.png"
+  },
+  {
+    "id": 5,
+    "title": "Jere",
+    "price": 369,
+    "category": "Table",
+    "stock": 2,
+    "image": "/img/tabla5.png"
+  },
+  {
+    "id": 6,
+    "title": "Royal",
+    "price": 832,
+    "category": "Table",
+    "stock": 2,
+    "image": "/img/tabla6.png"
+  },
+  {
+    "id": 7,
+    "title": "Janey",
+    "price": 787,
+    "category": "Table",
+    "stock": 4,
+    "image": "/img/tabla7.png"
+  },
+  {
+    "id": 8,
+    "title": "Emma",
+    "price": 22,
+    "category": "Table",
+    "stock": 1,
+    "image": "/img/tabla8.png"
+  },
+  {
+    "id": 9,
+    "title": "Fons",
+    "price": 9,
+    "category": "Table",
+    "stock": 8,
+    "image": "/img/tabla9.png"
+  },
+  {
+    "id": 10,
+    "title": "Ainslee",
+    "price": 668,
+    "category": "Table",
+    "stock": 2,
+    "image": "/img/tabla10.png"
+  }
+]
