@@ -3,6 +3,8 @@ import Card from "react-bootstrap/Card";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 const Items = (props) => {
   return (
@@ -20,6 +22,8 @@ const Items = (props) => {
                 <Card.Text>Modelo: {props.item.title}</Card.Text>
                 <Card.Text>Tamaño: {props.item.size}</Card.Text>
               </Card.Body>
+
+              <Button className="btn btn-dark">Detalles </Button>
             </Card>
           </Col>
         </Row>
