@@ -22,8 +22,9 @@ const Items = (props) => {
                 <Card.Text>Modelo: {props.item.title}</Card.Text>
                 <Card.Text>Tamaño: {props.item.size}</Card.Text>
               </Card.Body>
-
-              <Button className="btn btn-dark">Detalles </Button>
+              <Link to={`/item/${props.item.id}`}>
+                <Button className="btn btn-info">Detalles </Button>
+              </Link>
             </Card>
           </Col>
         </Row>
