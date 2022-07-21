@@ -1,16 +1,19 @@
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
 
 function NavBar() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="#">Surfar-Tiendita</Navbar.Brand>
+        <Link to={"/"}>
+          <Navbar.Brand href="#">Surfar-Tiendita</Navbar.Brand>
+        </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -18,18 +21,15 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Tablas</Nav.Link>
-            <NavDropdown title="Accesorios" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action3">Trajes</NavDropdown.Item>
-              <NavDropdown.Item href="#action4">
-                Botas y Guantes
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action5">
-                Mejoras y Accesorios
-              </NavDropdown.Item>
-            </NavDropdown>
+            <Link to={"/"}>
+              <Nav.Link href="#Home">Home</Nav.Link>{" "}
+            </Link>
+            <Link to={"/"}>
+              <Nav.Link href="#Tablas">Tablas</Nav.Link>{" "}
+            </Link>
+            <Link to={"/"}>
+              <Nav.Link href="#Contacto">Contacto</Nav.Link>{" "}
+            </Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

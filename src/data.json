@@ -5,7 +5,8 @@
     "price": 104,
     "category": "Table",
     "stock": 6,
-    "image": "/img/tabla1.png"
+    "image": "/img/tabla1.png",
+    "size": "6'6, 7'6, 8'6"
   },
   {
     "id": 2,
@@ -13,7 +14,8 @@
     "price": 935,
     "category": "Table",
     "stock": 1,
-    "image": "/img/tabla2.png"
+    "image": "/img/tabla2.png",
+    "size": "6'6, 7'6, 8'6"
   },
   {
     "id": 3,
@@ -21,7 +23,8 @@
     "price": 541,
     "category": "Table",
     "stock": 9,
-    "image": "/img/tabla3.png"
+    "image": "/img/tabla3.png",
+    "size": "6'9, 7'2, 7'6"
   },
   {
     "id": 4,
@@ -29,7 +32,8 @@
     "price": 817,
     "category": "Table",
     "stock": 2,
-    "image": "/img/tabla4.png"
+    "image": "/img/tabla4.png",
+    "size": "6, 6'2, 6'6"
   },
   {
     "id": 5,
@@ -37,7 +41,8 @@
     "price": 369,
     "category": "Table",
     "stock": 2,
-    "image": "/img/tabla5.png"
+    "image": "/img/tabla5.png",
+    "size": "7'6, 8"
   },
   {
     "id": 6,
@@ -45,7 +50,8 @@
     "price": 832,
     "category": "Table",
     "stock": 2,
-    "image": "/img/tabla6.png"
+    "image": "/img/tabla6.png",
+    "size": "7, 7'2, 7'4"
   },
   {
     "id": 7,
@@ -53,7 +59,8 @@
     "price": 787,
     "category": "Table",
     "stock": 4,
-    "image": "/img/tabla7.png"
+    "image": "/img/tabla7.png",
+    "size": "9'6, 9'8, 9'10"
   },
   {
     "id": 8,
@@ -61,7 +68,8 @@
     "price": 22,
     "category": "Table",
     "stock": 1,
-    "image": "/img/tabla8.png"
+    "image": "/img/tabla8.png",
+    "size": "6'10, 7, 7'2"
   },
   {
     "id": 9,
@@ -69,7 +77,8 @@
     "price": 9,
     "category": "Table",
     "stock": 8,
-    "image": "/img/tabla9.png"
+    "image": "/img/tabla9.png",
+    "size": "5, 5'2, 5'4"
   },
   {
     "id": 10,
@@ -77,6 +86,7 @@
     "price": 668,
     "category": "Table",
     "stock": 2,
-    "image": "/img/tabla10.png"
+    "image": "/img/tabla10.png",
+    "size": "6, 6'2, 6'4"
   }
 ]

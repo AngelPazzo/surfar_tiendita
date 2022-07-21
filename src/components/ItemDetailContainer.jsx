@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ItemDetail from "./ItemDetail";
 import DataJason from "../details.json";
+import Datos from "../data.json";
 
 const ItemDetailContainer = () => {
   const [item, setItem] = useState([]);
