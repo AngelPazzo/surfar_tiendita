@@ -21,7 +21,12 @@ const ItemDetailContainer = () => {
       setLoading(false);
     });
   }, []);
-  return <ItemDetail item={item} loading={loading} />;
+
+  return (
+    <>
+      <ItemDetail item={item} loading={loading} />;
+    </>
+  );
 };
 
 export default ItemDetailContainer;
