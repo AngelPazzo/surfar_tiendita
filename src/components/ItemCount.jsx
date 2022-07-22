@@ -1,7 +1,6 @@
 import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
-import Items from "./Item";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 const ItemCount = ({ stock, initial, onAdd }) => {
@@ -47,16 +46,3 @@ const ItemCount = ({ stock, initial, onAdd }) => {
 };
 
 export default ItemCount;
-
-{
-  /* <Button
-        onClick={() => {
-          onAdd(count);
-        }}
-        className="btnGoCart" variant="warning" disabled={count === 0} > Ir al Carrito</Button></div> */
-}
-
-//   >
-//     Add{" "}
-//   </Button>
-// </>

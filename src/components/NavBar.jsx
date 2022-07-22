@@ -12,7 +12,7 @@ function NavBar() {
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Link to={"/"}>
-          <Navbar.Brand href="#">Surfar-Tiendita</Navbar.Brand>
+        <Navbar.Brand href="#">Surfar-Tiendita</Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -21,15 +21,13 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link to={"/"}>
-              <Nav.Link href="#Home">Home</Nav.Link>{" "}
+            <Link to={"/category/suit"}>
+            <Nav.Link href="#Traje">Trajes</Nav.Link> </Link>
+            <Link to={"/category/table"}>
+            <Nav.Link href="#Tablas">Tablas</Nav.Link>{" "}
             </Link>
-            <Link to={"/"}>
-              <Nav.Link href="#Tablas">Tablas</Nav.Link>{" "}
-            </Link>
-            <Link to={"/"}>
-              <Nav.Link href="#Contacto">Contacto</Nav.Link>{" "}
-            </Link>
+            <Link to={"/category/boots"}>
+            <Nav.Link href="#Botas">Botas</Nav.Link> </Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

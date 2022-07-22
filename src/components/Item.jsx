@@ -22,9 +22,11 @@ const Items = (props) => {
                 <Card.Text>Modelo: {props.item.title}</Card.Text>
                 <Card.Text>Tamaño: {props.item.size}</Card.Text>
               </Card.Body>
-              <Link to={`/item/${props.item.id}`}>
-                <Button className="btn btn-info">Detalles </Button>
-              </Link>
+              <div class="col-md-12 text-center">
+                <Link to={`/item/${props.item.id}`}>
+                  <Button className="btn btn-info">Detalles </Button>
+                </Link>
+              </div>
             </Card>
           </Col>
         </Row>
