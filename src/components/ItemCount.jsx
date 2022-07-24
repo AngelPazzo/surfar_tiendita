@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
-import ButtonGroup from "react-bootstrap/ButtonGroup";
+
 
 const ItemCount = ({ stock, initial, onAdd }) => {
   const [count, setCount] = useState(initial);
@@ -9,37 +9,35 @@ const ItemCount = ({ stock, initial, onAdd }) => {
   return (
     <>
       <div className="agregarItem"></div>
-      <h5>Add to cart</h5>
-      <ButtonGroup size="lg" className="mb-2">
-        <Button
-          variant="outline-danger"
-          onClick={() => setCount(Math.max(count - 1, initial))}
-        >
-          -
-        </Button>
+      {/* <h5>Add to cart</h5> */}
         {count}
         <Button
-          variant="outline-success"
+          variant="outline-success" size="sm"
           onClick={() => setCount(Math.min(count + 1, stock))}
         >
           +
         </Button>
-      </ButtonGroup>
+        <Button
+          variant="outline-danger"
+          size="sm"
+          onClick={() => setCount(Math.max(count - 1, initial))}
+        >
+          -
+        </Button>
       <div>
         {" "}
-        <ButtonGroup size="lg" className="mb-2">
           <Button
             onClick={() => {
               onAdd(count);
             }}
             className="btnGoCart"
             variant="warning"
+            size="sm"
             disabled={count === 0}
           >
             {" "}
-            Go to cart!
+            Agregar al carrito
           </Button>
-        </ButtonGroup>
       </div>
     </>
   );

@@ -6,13 +6,19 @@ import Card from "react-bootstrap/Card";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import ItemCount from "./ItemCount";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-const onAddItem = (count) => {
-  alert(`Agregaste ${count} productos al carrito`);
-};
 
 const ItemDetail = ( props ) => {
-  
+  const [count, setCount] = useState(0);
+    
+
+const onAddItem = (count) => {
+  setCount(count);
+  // alert(`Agregaste ${count} productos al carrito`);
+};
+
 
     return props.loading ? (
       <>
@@ -35,7 +41,9 @@ const ItemDetail = ( props ) => {
                 <Card.Footer>
                   <small>Precio: {props.details.price} U$S</small>
                 </Card.Footer>
+                
                 <ItemCount stock={props.details.stock} initial={0} onAdd={onAddItem} />
+                <Link to="/cart"><Button variant="warning"size="sm">Ir al carrito</Button></Link>
               </Card>
             </Col>
           </Row>
