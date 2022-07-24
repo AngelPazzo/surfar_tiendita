@@ -1,0 +1,246 @@
+[
+  {
+    "id": 1,
+    "title": "Cleveland",
+    "price": 104,
+    "category": {
+      "id": 1,
+      "name": "table"
+    },
+    "stock": 6,
+    "image": "/img/tabla1.png",
+    "info": "El “Gun” es un diseño de tablas de surf creado exclusivamente para olas grandes y la mayoría de los surfistas nunca surfean con estas tablas en otras condiciones que no sea ola tamaño XL. Estamos hablando de olas de 6 o quizás 12 metros de altura (La ola más grande surfeada fué en Nazaré (Portugal) con 24,3 metros de altura por Rodrigo Coxa). En caso de que seas un valiente de olas grandes te contaremos un poco sobre ellas. Son tablas largas desde 6’6 hasta 10 pies.",
+    "color": "white, grey, black",
+    "size": "6'6, 7'6, 8'6"
+  },
+  {
+    "id": 2,
+    "title": "Jana",
+    "price": 935,
+    "category": {
+      "id": 2,
+      "name": "table"
+    },
+    "stock": 1,
+    "image": "/img/tabla2.png",
+    "info": "Las dimensiones de este tipo de tabla de surf pequeña la convierte en un modelo muy manejable.  Su corta longitud, sus cantos estrechos y su rocker  proporcionan una gran maniobrabilidad. Las tablas de surf Shortboard son ideales para realizar maniobras avanzadas como aéreos, snaps, cutbacks, etc. Su rocker  hace que sea mucho más fácil «golpear» las partes críticas de la ola. Y es que su outline y diseño de esta tabla de surf «encaja» a la perfección en la forma de la rompiente de la ola. Con estas tablas es más fácil realizar giros que con tablas más voluminosas. ",
+    "color": "white, grey",
+    "size": "6'6, 7'6, 8'6"
+  },
+  {
+    "id": 3,
+    "title": "Nanni",
+    "price": 541,
+    "category": {
+      "id": 3,
+      "name": "table"
+    },
+    "stock": 9,
+    "image": "/img/tabla3.png",
+    "info": "Las tablas retro , están inspiradas en los diseños de los  años 70.  Destacan por su peculiar diseño. Dentro de esta gama de tablas podemos encontrar single fins,  twin fins, bonzers y hulls. Para poder surfear bien con este modelo de tablas se necesita tener por lo menos un nivel intermedio. Son perfectas para olas pequeñas o medianas. Con olas grandes no funcionan igual. A no ser que seas Asher Pacey, que vuela sobre su Mini Twin en olones en Maldivas.",
+    "color": "white, black",
+    "size": "6'9, 7'2, 7'6"
+  },
+  {
+    "id": 4,
+    "title": "Loralyn",
+    "price": 817,
+    "category": {
+      "id": 4,
+      "name": "table"
+    },
+    "stock": 2,
+    "image": "/img/tabla4.png",
+    "info": "Las tablas softboard o corchipanes, como se las conoce popularmente, acostumbran a ser para los niños y escuelas de surf. Pero los soft han evolucionado tanto, que hasta el ex campeón del mundo Mick Fanning ha sacado su propia colección de softboards. Mick Fanning Softboards. Este tipo de tablas ofrece una gran flotabilidad y maniobrabilidad. Este tipo de tabla de corcho es una alternativa muy divertida para olas de verano.",
+    "color": "white, black",
+    "size": "6, 6'2, 6'6"
+  },
+  {
+    "id": 5,
+    "title": "Jere",
+    "price": 369,
+    "category": {
+      "id": 5,
+      "name": "table"
+    },
+    "stock": 2,
+    "image": "/img/tabla5.png",
+    "info": "Las tablas Minimalibú están pensadas para aquellas personas que ya han hecho sus primeros pinitos con el surf y quieren continuar evolucionando. Una tabla de surf Malibú o mini malibu son una buena alternativa como tablas de surf para principiantes. Perfectamente podría convertirse en tu primera tabla de surf de fibra. Son anchas desde su tail hasta el nose. Proporcionan una gran estabilidad y facilitan la remada. Un tipo de tabla aconsejable para aquellos que están empezando. Su shape nos recuerda a las tablas de surf hawaianas de las películas.",
+    "color": "white",
+    "size": "7'6, 8"
+  },
+  {
+    "id": 6,
+    "title": "Royal",
+    "price": 832,
+    "category": {
+      "id": 6,
+      "name": "table"
+    },
+    "stock": 2,
+    "image": "/img/tabla6.png",
+    "info": "Las tablas evolutivas a las cuales hemos bautizado como la mejor tabla de surf para principiantes, destacan porque son grandes y gruesas. Ambas características contribuyen a darle al surfista más estabilidad y flotabilidad. Y es que su diseño hace que sea más fácil remar y surfear las olas desde el primer día. Si lo que buscas es hacerte maniobras, no es el mejor modelo.",
+    "color": "light blue",
+    "size": "7, 7'2, 7'4"
+  },
+  {
+    "id": 7,
+    "title": "Janey",
+    "price": 787,
+    "category": {
+      "id": 7,
+      "name": "table"
+    },
+    "stock": 4,
+    "image": "/img/tabla7.png",
+    "info": "Las longboards son tablas grandes. También se las conoce como tablones, longs, tablas a partir de 9 pies… Suelen tener una punta redonda.  Son ideales para olas pequeñas y medianas. Sólo se recomienda para olas grandes cuando el surfista tiene cierto nivel y experiencia.",
+    "color": "red, blue, white",
+    "size": "9'6, 9'8, 9'10"
+  },
+  {
+    "id": 8,
+    "title": "Emma",
+    "price": 22,
+    "category": {
+      "id": 8,
+      "name": "table"
+    },
+    "stock": 1,
+    "image": "/img/tabla8.png",
+    "info": "Las tablas híbridas son una mezcla entre los tipos de tablas shortboard, fish, egg, y mini malibu. Es el tipo de tabla que todo surfista debería de tener en su quiver. Una tabla de surf multiusos, apta para la gran mayoría de olas.  Tienen una buena maniobrabilidad y no requiere de un alto nivel para poder disfrutarlas. Se pueden utilizar cuando las olas son pequeñas y no tienen mucha fuerza.",
+    "color": "white, green, blue",
+    "size": "6'10, 7, 7'2"
+  },
+  {
+    "id": 9,
+    "title": "Fons",
+    "price": 9,
+    "category": {
+      "id": 9,
+      "name": "table"
+    },
+    "stock": 8,
+    "image": "/img/tabla9.png",
+    "info": "Las tablas Groms son tablas especialmente pensadas para los pequeños surfistas. También las puedes encontrar como tablas de surf para niños. Ideales para niños que ya saben lo básico y están pensando en mejorar su surf y hacer nuevos trucos y maniobras. Las tablas grom están adaptadas al peso y altura de esas jóvenes promesas.",
+    "color": "white, black",
+    "size": "5, 5'2, 5'4"
+  },
+  {
+    "id": 10,
+    "title": "Ainslee",
+    "price": 668,
+    "category": {
+      "id": 10,
+      "name": "table"
+    },
+    "stock": 2,
+    "image": "/img/tabla10.png",
+    "info": "Los guns en el surf están diseñadas para surfear olas grandes. A grandes rasgos: cuanto más larga sea la tabla, olas más grandes se podrán coger. El diseño de las tablas suele ser con un tail y nose afilados. Esto permite poder coger las olas con mayor velocidad y estabilidad. Para poder utilizar una tabla como esta se requiere un nivel muy alto de surf.",
+    "color": "white, black, red",
+    "size": "6, 6'2, 6'4"
+  },
+  {
+    "id": 11,
+    "title": "HEAD SWIMRUN RACE 6.4.2 MUJER",
+    "price": 120,
+    "category": {
+      "id": 11,
+      "name": "suit"
+    },
+    "stock": 4,
+    "image": "/img/traje1.png",
+    "info": "Este traje combina las performaces de natación y de carrera..",
+    "size": "xs, s, m, l"
+  },
+  {
+    "id": 12,
+    "title": "MARES REEF 3 MM MUJER",
+    "price": 140,
+    "category": {
+      "id": 12,
+      "name": "suit"
+    },
+    "stock": 3,
+    "image": "/img/traje2.png",
+    "info": "El traje de neoprene para mujer Reef She Dives está fabricado en neoprene de una pieza de 3 mm. Fresco y elástico e ideal para aguas templadas. Con un panel de pecho de goma suave y elástico, es la elección ideal para los deportes acuáticos de superficie.",
+    "size": "s, m"
+  },
+  {
+    "id": 13,
+    "title": "HEAD SWIMRUN ROUGH 4.3.2 HOMBRE",
+    "price": 210,
+    "category": {
+      "id": 13,
+      "name": "suit"
+    },
+    "stock": 2,
+    "image": "/img/traje3.png",
+    "info": "Traje de neoprene multiproposito ideal para nado.",
+    "size": "l, xl, xxl"
+  },
+  {
+    "id": 14,
+    "title": "TRAJE DE NEOPRENE 4.3 MM MONK THERMOSKIN",
+    "price": 190,
+    "category": {
+      "id": 14,
+      "name": "suit"
+    },
+    "stock": 5,
+    "image": "/img/traje4.png",
+    "info": "Traje de neoprene recomendado a partir de 12º. Traje de neoprene de 4.3 mm Monk Thermoskin. Entero con cierre en espalda.",
+    "size": "s, m, l, xl, xxl"
+  },
+  {
+    "id": 15,
+    "title": "TRAJE DE NEOPRENE HEAD MULTIX VL 2,5 MM",
+    "price": 180,
+    "category": {
+      "id": 15,
+      "name": "suit"
+    },
+    "stock": "AGOTADO",
+    "image": "/img/traje5.png",
+    "info": "Un práctico traje completo para todo tipo de actividades náuticas.",
+    "size": ""
+  },
+  {
+    "id": 16,
+    "title": "BOTA DE NEOPRENE 4MM THERMOSKIN",
+    "price": 25,
+    "category": {
+      "id": 16,
+      "name": "boots"
+    },
+    "stock": 3,
+    "image": "/img/bota1.png",
+    "info": "Bota de neoprene de 4 mm ideal para windsurf, surf, kitesurf, jet sky, moto de agua y demas deportes acuáticos.",
+    "size": "xl, xxl"
+  },
+  {
+    "id": 17,
+    "title": "BOTAS DE NEOPRENE DEDO SEPARADO 4MM",
+    "price": 40,
+    "category": {
+      "id": 17,
+      "name": "boots"
+    },
+    "stock": 2,
+    "image": "/img/bota2.png",
+    "info": "Bota Neoprene 4 Mm Importada ideal para windsurf, surf, kitesurf, jet sky, moto de agua y demas deportes acuáticos.",
+    "size": "m, l, xl"
+  },
+  {
+    "id": 18,
+    "title": "BOTAS DE NEOPRENE MARES EQUATOR 2 MM",
+    "price": 35,
+    "category": {
+      "id": 18,
+      "name": "boots"
+    },
+    "stock": 3,
+    "image": "/img/bota3.png",
+    "info": "Botas de neoprene para playa, buceo, snorkel, kayak, SUP y toda actividad acuatica donde requiera proteger la planta del pie y requiera buen agarre.",
+    "size": "m, l, xl"
+  }
+]
