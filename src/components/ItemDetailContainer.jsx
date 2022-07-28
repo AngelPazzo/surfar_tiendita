@@ -3,7 +3,7 @@ import ItemDetail from "./ItemDetail";
 import DataJason from "../details.json";
 import { useParams } from "react-router-dom";
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = ({setCount}) => {
   const { id } = useParams();
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -25,7 +25,7 @@ const ItemDetailContainer = () => {
   }, []);
   return (
     <>
-      <ItemDetail details={details} loading={loading} />;
+      <ItemDetail setCount={setCount}  details= {details} loading={loading} />;
     </>
   );
 };

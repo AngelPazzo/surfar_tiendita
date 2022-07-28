@@ -6,11 +6,18 @@ import Col from "react-bootstrap/Col";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
+
+
+
+
+
+
+
 const Items = (props) => {
   return (
     <>
     
-      <Container style={{ width: "18rem" }}>
+      <Container  style={{ width: "18rem" }}>
         <Row className="d-flex  mb-5 flex-nowrap">
           <Col  md="auto">
             <Card style={{ width: "18rem" }}>

@@ -6,19 +6,22 @@ import Card from "react-bootstrap/Card";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import ItemCount from "./ItemCount";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "./CartContext";
 
+const ItemDetail = ( props, loading ) => {
+  const [amount, setAmount] = useState(0);
+  const { cartItems, setCartItems, addItem} = useContext(CartContext);
+    
 
+// const onAddItem = (amount) => {
+//   setAmount(amount);
+//   setAmountItem((state) => state + 1);
+// };
+  //  alert(`Agregaste ${amount} productos al carrito`);
 
-const ItemDetail = ( props ) => {
-  const [count, setCount] = useState(0);
-  
-  const onAddItem = (count) => {
-  setCount(count);
-  
-
-};
 
 
     return props.loading ? (
@@ -43,9 +46,8 @@ const ItemDetail = ( props ) => {
                   <small>Precio: {props.details.price} U$S</small>
                 </Card.Footer>
                 
-                {count == 0 && <ItemCount stock={props.details.stock} initial={0} onAdd={onAddItem} />}
-                <Link to="/cart/"><Button variant="warning"size="sm">Ir al carrito</Button></Link>
-                
+                <ItemCount stock={props.details.stock} initial={0} onAdd={addItem} item = {props} amount = {amount} />
+                <Link to="/cart"><Button variant="warning"size="sm">Ir al carrito</Button></Link>
               </Card>
             </Col>
           </Row>

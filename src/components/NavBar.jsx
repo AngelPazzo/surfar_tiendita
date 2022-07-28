@@ -39,9 +39,11 @@ function NavBar() {
             <Button variant="outline-success">Search</Button>
           </Form>
           <Nav className="d-flex">
-            <Nav.Link href="#">
+          <Link to={"/cart"}>
+            <Nav.Link href="#Cart">
               <CartWidget />
             </Nav.Link>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

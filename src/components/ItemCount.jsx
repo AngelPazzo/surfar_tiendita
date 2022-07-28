@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 
 
-const ItemCount = ({ stock, initial, onAdd }) => {
+const ItemCount = ({ stock, initial, onAdd, item }) => {
   const [count, setCount] = useState(initial);
 
   return (
@@ -28,7 +28,7 @@ const ItemCount = ({ stock, initial, onAdd }) => {
         {" "}
           <Button
             onClick={() => {
-              onAdd(count);
+              onAdd(item, count);
             }}
             className="btnGoCart"
             variant="warning"
