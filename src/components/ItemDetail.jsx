@@ -11,17 +11,14 @@ import { useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
 
-const ItemDetail = ( props, loading ) => {
+const ItemDetail = ( props ) => {
   const [amount, setAmount] = useState(0);
-  const { cartItems, setCartItems, addItem} = useContext(CartContext);
-    
-
-// const onAddItem = (amount) => {
-//   setAmount(amount);
-//   setAmountItem((state) => state + 1);
-// };
-  //  alert(`Agregaste ${amount} productos al carrito`);
-
+   const { addItem} = useContext(CartContext);
+  
+  const onAdd = (item, count, amount) => {
+     addItem(item, count);
+     setAmount(amount);
+   }
 
 
     return props.loading ? (
@@ -46,7 +43,7 @@ const ItemDetail = ( props, loading ) => {
                   <small>Precio: {props.details.price} U$S</small>
                 </Card.Footer>
                 
-                <ItemCount stock={props.details.stock} initial={0} onAdd={addItem} item = {props} amount = {amount} />
+                <ItemCount stock={props.details.stock} initial={0} onAdd={onAdd} item = {props.details} amount = {amount} />
                 <Link to="/cart"><Button variant="warning"size="sm">Ir al carrito</Button></Link>
               </Card>
             </Col>
@@ -55,7 +52,7 @@ const ItemDetail = ( props, loading ) => {
       </>
     ) : (
       <>
-      <div class="col-md-12 text-center">
+      <div className ="col-md-12 text-center">
       <Button variant="primary" disabled>
         <Spinner
           as="span"

@@ -1,29 +1,27 @@
-import React from "react";
+import React, { Children } from "react";
 import { createContext, useEffect, useState } from "react";
+
 
 export const CartContext = createContext();
 
-const CartContextProvider = (props) => {
+const CartContextProvider = ({children}) => {
     const [cartItems, setCartItems] = useState([]);
 
-    useEffect(() => {
-        isInCart();
-}   , [cartItems]);
 
-    const isInCart = (itemID) => {
-        let itemInCart = cartItems.find((item) => item.id === itemID);
-        if (itemInCart) {
-            itemInCart.count++;
-            setCartItems([...cartItems]);
-        } else {
-            setCartItems([...cartItems, { id: itemID, count: 1 }]);
+    const addItem = (item, quantity) => {
+        const newItem = isInCart(item);
+        if (newItem) {
+            newItem.count += quantity;
+        setCartItems ( cartItems.splice(cartItems.findIndex ((element) => element.item.id === item.id), 1));
         }
-    }
+        setCartItems([...cartItems, { item, quantity }]);
+    };
 
-    // const addItem = (itemID) => {
-    //     isInCart(itemID);
-    // }
-
+    
+    const isInCart = (item) => {
+        return cartItems.find((element) => element.item === item);
+    };
+    
 
     const removeItem = (itemID) => {
         let itemInCart = cartItems.find((item) => item.id === itemID);
@@ -48,21 +46,12 @@ const CartContextProvider = (props) => {
         return total;
     }
     return (
-        <CartContext.Provider value={{ cartItems, isInCart, addItem, removeItem, clearCart, getTotal }}>
-            {props.children}
+        <CartContext.Provider value={{ cartItems, addItem, removeItem, clearCart, getTotal }}>
+            {children}
         </CartContext.Provider>
     );
-
-    const addItem = (itemID) => {
-        isInCart(itemID);
-    }
 
     
-
-    return (
-        <CartContext.Provider value={{ cartItems, addItem, removeItem, getTotal }}>
-            {props.children}
-        </CartContext.Provider>
-    );
 }
+export default CartContextProvider;
 

@@ -7,6 +7,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Cart from './components/Cart';
 import { useState } from 'react';
+import { CartContext } from './components/CartContext';
 
 
 
@@ -14,6 +15,7 @@ function App() {
   const [setAmount, setAmountItems] = useState(0);
   return (
     <>
+      
     <BrowserRouter>
     <NavBar />
     <Routes>
