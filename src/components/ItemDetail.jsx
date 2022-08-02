@@ -42,9 +42,20 @@ const ItemDetail = ( props ) => {
                 <Card.Footer>
                   <small>Precio: {props.details.price} U$S</small>
                 </Card.Footer>
-                
+
+                { (amount === 0) ? (
+                                  
                 <ItemCount stock={props.details.stock} initial={0} onAdd={onAdd} item = {props.details} amount = {amount} />
-                <Link to="/cart"><Button variant="warning"size="sm">Ir al carrito</Button></Link>
+                ) : (
+                  <>
+                <Link to={"/cart"}><Button variant="warning"size="sm">Ir al carrito</Button></Link>
+                
+                <Link to ={"/"}><Button variant="warning"size="sm">Volver al inicio</Button></Link>
+                </>
+                )}
+                
+
+
               </Card>
             </Col>
           </Row>

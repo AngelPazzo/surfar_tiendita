@@ -11,31 +11,32 @@ const Cart = () => {
     const total = getTotal();
     
     return (
-        <>
-        {cartItems.length === 0 ? (
-            <>
-            <Link to="/"> <Button variant="primary" >Volver</Button></Link>
-        </>
-        ) : (
-            <>
-            {cartItems.map((item) => (
-                <CartItem item={item.item} quantity={item.quantity} removeItem={removeItem} />
-            ))}
-            <button onClick={clearCart} className="btn btn-danger">
-                Limpiar carrito
-            </button>
-            <h3>Total: {total} U$S</h3>
-            <button className ="btn btn-success">Ir al checkout</button>
-            <Link to="/"> <Button variant="primary" >Volver</Button></Link>
-            </>
-        )}
-        </>
+        <div className="cart">
+            <h2>Cart</h2>
+            <div className="cart-items">
+                {cartItems.map((item) => (
+                    <CartItem key={item.id} item={item} />
+                ))}
+            </div>
+            <div className="cart-total">
+                <span>Total: {total} U$S</span>
+            </div>
+            <div className="cart-buttons">
+                <Link to="/category/suit">
+                    <Button variant="outline-success">Continue Shopping</Button>
+                </Link>
+                <Button variant="outline-danger" onClick={clearCart}>
+                    Clear Cart
+                </Button>
+                <Link to="/checkout">
+                    <Button variant="outline-success">Checkout</Button>
+                </Link>
+            </div>
+        </div>
     );
 }
-
 export default Cart;
 
-            
 
 
 
@@ -43,22 +44,3 @@ export default Cart;
 
 
 
-
-
-
-    //     <div className="cart">
-    //     <h5>Carrito</h5>
-    //     <ul>
-    //         {cartItems.map((item) => (
-    //         <li key={item.id} quantity = {item.quantity}> removeItem={removeItem} item={item} 
-    //             <button onClick={() => removeItem(item.id)}>-</button>
-    //             <button onClick={() => addItem(item.id)}>+</button>
-    //         </li>
-    //         ))}
-    //     </ul>
-    //     <p>Total: {getTotal()}</p>
-    //     <button onClick={clearCart}>Vaciar carrito</button>
-    //     </div>
-    // );
-    // }
-    // export default Cart;
