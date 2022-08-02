@@ -8,6 +8,7 @@ import {BrowserRouter,Route,Routes} from 'react-router-dom'
 import Cart from './components/Cart';
 import { useState } from 'react';
 import { CartContext } from './components/CartContext';
+import CartContextProvider from './components/CartContext';
 
 
 
@@ -15,7 +16,7 @@ function App() {
   const [setAmount, setAmountItems] = useState(0);
   return (
     <>
-      
+      <CartContextProvider>
     <BrowserRouter>
     <NavBar />
     <Routes>
@@ -34,6 +35,7 @@ function App() {
     
     
     </BrowserRouter>
+    </CartContextProvider>
     </>
   );
 }
