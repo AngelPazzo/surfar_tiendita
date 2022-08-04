@@ -16,8 +16,8 @@ import { Link } from "react-router-dom";
 const Items = (props) => {
   return (
     <>
-    
-      <Container  style={{ width: "18rem" }}>
+      
+      <Container style={{ width: "18rem" }}>
         <Row className="d-flex  mb-5 flex-nowrap">
           <Col  md="auto">
             <Card style={{ width: "18rem" }}>
@@ -30,7 +30,31 @@ const Items = (props) => {
                 <Card.Text>Modelo: {props.item.title}</Card.Text>
                 <Card.Text>Tamaño: {props.item.size}</Card.Text>
               </Card.Body>
-              <div class="col-md-12 text-center">
+              <div className ="col-md-12 text-center">
+                <Link to={`/item/${props.item.id}`}>
+                  <Button className="btn btn-info">ver más... </Button>
+                </Link>
+              </div>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
+      
+    {/* <div className="card1"> 
+      <Container style={{ width: "18rem" }}>
+        <Row className="d-flex  mb-5 flex-nowrap">
+          <Col  md="auto">
+            <Card style={{ width: "18rem" }}>
+              <Card.Img
+                variant="top"
+                src={props.item.image}
+                alt={props.item.title}
+              />
+              <Card.Body>
+                <Card.Text>Modelo: {props.item.title}</Card.Text>
+                <Card.Text>Tamaño: {props.item.size}</Card.Text>
+              </Card.Body>
+              <div className ="col-md-12 text-center">
                 <Link to={`/item/${props.item.id}`}>
                   <Button className="btn btn-info">Detalles </Button>
                 </Link>
@@ -39,6 +63,7 @@ const Items = (props) => {
           </Col>
         </Row>
       </Container>
+    </div> */}
     
     </>
   );

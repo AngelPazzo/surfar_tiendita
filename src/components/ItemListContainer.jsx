@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
 import Button from "react-bootstrap/Button";
 import { propTypes } from "react-bootstrap/esm/Image";
+import {getDoc, doc, getFirestore, collection, getDocs, query, where, limit} from "firebase/firestore";
 
 const ItemListContainer = () => {
   const { name } = useParams();
@@ -13,6 +14,21 @@ const ItemListContainer = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
+    
+    const db = getFirestore();
+    const ItemCollection = collection (db, "data");
+    getDocs (ItemCollection).then(snapshot => {
+      const data = snapshot.docs.map ((doc) => ({ id: doc.id, ...doc.data() }));
+    });
+
+
+
+
+
+
+
+
+
     setLoading(true);
     let filtrarDatos = new Promise((resolve) => {
       setTimeout(() => {
