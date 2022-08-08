@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import DataJason from "../data.json";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import Spinner from "react-bootstrap/Spinner";
@@ -9,49 +8,30 @@ import {getDoc, doc, getFirestore, collection, getDocs, query, where, limit} fro
 
 const ItemListContainer = () => {
   const { name } = useParams();
-  console.log(name);
   const [loading, setLoading] = useState(false);
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    
     const db = getFirestore();
-    const ItemCollection = collection (db, "data");
-    getDocs (ItemCollection).then(snapshot => {
-      const data = snapshot.docs.map ((doc) => ({ id: doc.id, ...doc.data() }));
-    });
-
-
-
-
-
-
-
-
-
-    setLoading(true);
-    let filtrarDatos = new Promise((resolve) => {
-      setTimeout(() => {
-        if (name) {
-          resolve(
-            DataJason.filter((products) => products.category.name === name)
-          );
-        } else {
-          resolve(DataJason);
-        }
-      }, 2000);
-      setLoading(false);
-    });
-    
-
-    filtrarDatos.then((items) => {
-      setItems(items);
-      setLoading(true);
-    })
-
-      .catch((err) => console.log(err));
-  }, [name]);
-
+    const itemCollection = collection(db,"data");
+    if(name){
+      const qName = query (itemCollection, where("category.name", "==", name))
+      console.log (name)
+      getDocs(qName).then((snapshot) => {
+        const items = snapshot.docs.map(doc => ({
+          id: doc.id, ...doc.data()
+        }));
+        setItems(items);
+      }
+      )}else{
+        getDocs(itemCollection).then((snapshot) => {
+          const items = snapshot.docs.map(doc => ({
+            id: doc.id, ...doc.data()
+          }));
+          setItems(items);
+        } 
+        )}} , [name]);
+  
 
   return (
     <>

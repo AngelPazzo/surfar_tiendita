@@ -144,7 +144,7 @@
     "title": "HEAD SWIMRUN RACE 6.4.2 MUJER",
     "price": 120,
     "category": {
-      "id": 11,
+      "id": 2,
       "name": "suit"
     },
     "stock": 4,
@@ -209,7 +209,7 @@
     "title": "BOTA DE NEOPRENE 4MM THERMOSKIN",
     "price": 25,
     "category": {
-      "id": 16,
+      "id": 3,
       "name": "boots"
     },
     "stock": 3,
@@ -222,7 +222,7 @@
     "title": "BOTAS DE NEOPRENE DEDO SEPARADO 4MM",
     "price": 40,
     "category": {
-      "id": 17,
+      "id": 3,
       "name": "boots"
     },
     "stock": 2,

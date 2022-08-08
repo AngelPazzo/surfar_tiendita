@@ -20,7 +20,6 @@ const ItemDetail = ( props ) => {
      setAmount(amount);
    }
 
-
     return props.loading ? (
       <>
         <Container style={{ width: "18rem" }}>
@@ -33,6 +32,7 @@ const ItemDetail = ( props ) => {
                   <Card.Text>Descripción: {props.details.info}</Card.Text>
                   <Card.Text>Tamaño: {props.details.size}</Card.Text>
                   <Card.Text>Color: {props.details.color}</Card.Text>
+                  
                 </Card.Body>
                 <Card.Footer>
                   <small className="text-muted">
@@ -47,14 +47,11 @@ const ItemDetail = ( props ) => {
                                   
                 <ItemCount stock={props.details.stock} initial={0} onAdd={onAdd} item = {props.details} amount = {amount} />
                 ) : (
-                  <>
-                <Link to={"/cart"}><Button variant="warning"size="sm">Ir al carrito</Button></Link>
-                
-                <Link to ={"/"}><Button variant="warning"size="sm">Volver al inicio</Button></Link>
-                </>
+                  <>                  
+                  <Link to={"/cart"}><Button variant="warning"size="sm">Ir al carrito</Button></Link>                  
+                  <Link to ={"/"}><Button variant="warning"size="sm">Volver al inicio</Button></Link>
+                  </>                  
                 )}
-                
-
 
               </Card>
             </Col>
@@ -75,7 +72,9 @@ const ItemDetail = ( props ) => {
         Loading...</Button>
         </div>
     </>
+    
   );
+  
 };
 
 

@@ -7,19 +7,26 @@ import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 
-
-
-
-
-
-
 const Items = (props) => {
   return (
     <>
-      
-      <Container style={{ width: "18rem" }}>
-        <Row className="d-flex  mb-5 flex-nowrap">
-          <Col  md="auto">
+     <div className="col m-2">
+      <div className="card card border-primary mb-3">
+        <div className="card-body">
+          <h5 className="card-title">{props.item.title}</h5>
+          <img src={props.item.image} style={{ width: "150px" }} alt={props.item.title} />
+          <Link to={`/item/${props.item.id}`}>
+                  <Button className="btn btn-info">ver más... </Button>
+                </Link>
+
+        </div>
+      </div>
+    </div>
+
+
+
+
+      {/* <div className= "row row-cols-1 row-cols-sm-4 d-flex justify-content-center">
             <Card style={{ width: "18rem" }}>
               <Card.Img
                 variant="top"
@@ -30,41 +37,14 @@ const Items = (props) => {
                 <Card.Text>Modelo: {props.item.title}</Card.Text>
                 <Card.Text>Tamaño: {props.item.size}</Card.Text>
               </Card.Body>
-              <div className ="col-md-12 text-center">
+              
                 <Link to={`/item/${props.item.id}`}>
                   <Button className="btn btn-info">ver más... </Button>
                 </Link>
-              </div>
+              
             </Card>
-          </Col>
-        </Row>
-      </Container>
-      
-    {/* <div className="card1"> 
-      <Container style={{ width: "18rem" }}>
-        <Row className="d-flex  mb-5 flex-nowrap">
-          <Col  md="auto">
-            <Card style={{ width: "18rem" }}>
-              <Card.Img
-                variant="top"
-                src={props.item.image}
-                alt={props.item.title}
-              />
-              <Card.Body>
-                <Card.Text>Modelo: {props.item.title}</Card.Text>
-                <Card.Text>Tamaño: {props.item.size}</Card.Text>
-              </Card.Body>
-              <div className ="col-md-12 text-center">
-                <Link to={`/item/${props.item.id}`}>
-                  <Button className="btn btn-info">Detalles </Button>
-                </Link>
-              </div>
-            </Card>
-          </Col>
-        </Row>
-      </Container>
-    </div> */}
-    
+      </div>
+     */}
     </>
   );
 };

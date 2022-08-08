@@ -1,11 +1,14 @@
 import React from "react";
 
 const CartItem = ({ item, quantity, removeItem}) => {
+    console.log (item.price);
     return ( 
-       <div className = "flex">
-        <img src={item.image} alt={item.name} />{ item.name } - { item.price } U$S 
-        <button onClick={() => removeItem(item.id)}>-</button>
-       </div>
+    <div>
+        <h1>
+            {item.title}
+        </h1>
+    </div>
+      
     );
 }
 export default CartItem;

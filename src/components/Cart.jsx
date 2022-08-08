@@ -12,6 +12,8 @@ const Cart = () => {
     
     return (
         <div className="cart">
+            
+
             <h2>Cart</h2>
             <div className="cart-items">
                 {cartItems.map((item) => (
@@ -22,7 +24,7 @@ const Cart = () => {
                 <span>Total: {total} U$S</span>
             </div>
             <div className="cart-buttons">
-                <Link to="/category/suit">
+                <Link to="/">
                     <Button variant="outline-success">Continue Shopping</Button>
                 </Link>
                 <Button variant="outline-danger" onClick={clearCart}>
