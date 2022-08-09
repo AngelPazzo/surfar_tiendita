@@ -24,14 +24,8 @@ const CartContextProvider = ({children}) => {
     
 
     const removeItem = (itemID) => {
-        let itemInCart = cartItems.find((item) => item.id === itemID);
-        if (itemInCart.count > 1) {
-            itemInCart.count--;
-            setCartItems([...cartItems]);
-        } else {
-            let newCart = cartItems.filter((item) => item.id !== itemID);
-            setCartItems([...newCart]);
-        }
+        setCartItems(cartItems.filter((item) => item.item.id !== itemID));
+    
     }
 
     const clearCart = () => {
@@ -46,6 +40,8 @@ const CartContextProvider = ({children}) => {
             {children}
         </CartContext.Provider>
     );
+
+
 
     
 }
