@@ -19,7 +19,7 @@ const CartContextProvider = ({children}) => {
 
     
     const isInCart = (item) => {
-        return cartItems.find((element) => element.item === item);
+        return cartItems.find((element) => element.item.id === item.id);
     };
     
 
