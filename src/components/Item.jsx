@@ -5,16 +5,17 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import "./item.css"
 
 
 const Items = (props) => {
   return (
     <>
-     <div className="col m-2">
+     <div className="m-4" >
       <div className="card card border-primary mb-3">
         <div className="card-body">
           <h5 className="card-title">{props.item.title}</h5>
-          <img src={props.item.image} style={{ width: "150px" }} alt={props.item.title} />
+          <img className="img2" src={props.item.image} alt={props.item.title} />
           <Link to={`/item/${props.item.id}`}>
                   <Button className="btn btn-info">ver más... </Button>
                 </Link>

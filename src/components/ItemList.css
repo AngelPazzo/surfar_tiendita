@@ -1,0 +1,16 @@
+.fondeli {
+    display: flex;
+    justify-content: center;
+}
+
+.foto1 {
+    max-width: 300px;
+    border-radius: 19px;
+    border-style: solid;
+    margin: 20px;
+}
+
+.imgDeProducto {
+    height: 200px;
+
+}

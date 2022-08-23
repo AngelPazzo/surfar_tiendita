@@ -6,13 +6,14 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import { Link } from "react-router-dom";
 import CartWidget from "./CartWidget";
+import logo from "../logo.png"
 
 function NavBar() {
   return (
     <Navbar bg="dark" variant="dark" expand="lg">
       <Container fluid>
         <Link to={"/"}>
-        <Navbar.Brand href="#">Surfar-Tiendita</Navbar.Brand>
+        <Navbar.Brand href="#"><img style={{width: 150}} src={logo} alt="logo" /> </Navbar.Brand>
         </Link>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
@@ -29,21 +30,19 @@ function NavBar() {
             <Link to={"/category/boots"}>
             <Nav.Link href="#Botas">Botas</Nav.Link> </Link>
           </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder="Search"
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="outline-success">Search</Button>
-          </Form>
+          
           <Nav className="d-flex">
+          <Link to={"/contact"}>
+            <Nav.Link href="#Contacto">Contacto
+            </Nav.Link>
+            </Link>
           <Link to={"/cart"}>
             <Nav.Link href="#Cart">
               <CartWidget />
             </Nav.Link>
             </Link>
+           
+
           </Nav>
         </Navbar.Collapse>
       </Container>
