@@ -10,7 +10,7 @@ El trabajo esta basado en React utilizando herramientas de :
 
 -React-Router
 
-En futuras actualizaciones se incorporaran  APIs y Firebase.
+-Firebase.
 
 
 
