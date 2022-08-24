@@ -16,7 +16,7 @@ const ItemListContainer = () => {
     const itemCollection = collection(db,"data");
     if(name){
       const qName = query (itemCollection, where("category.name", "==", name))
-      console.log (name)
+      
       getDocs(qName).then((snapshot) => {
         const items = snapshot.docs.map(doc => ({
           id: doc.id, ...doc.data()

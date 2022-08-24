@@ -10,6 +10,7 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import { useContext } from "react";
 import { CartContext } from "./CartContext";
+import "./itemDetail.css"
 
 const ItemDetail = ( props ) => {
   const [amount, setAmount] = useState(0);
@@ -22,7 +23,52 @@ const ItemDetail = ( props ) => {
 
     return props.loading ? (
       <>
-        <Container style={{ width: "18rem" }}>
+
+<Card className="text-center cardDetail">
+      <Card.Header>Modelo: {props.details.title}</Card.Header>
+      <Card.Img className="imgDetails" variant="top" src={props.details.image} alt={props.details.title} />
+      <Card.Body>
+        
+        <Card.Text>
+        Descripción: {props.details.info}
+        </Card.Text>
+        <Card.Text>
+        Tamaño: {props.details.size}
+        </Card.Text>
+        <Card.Text>
+        Color: {props.details.color}
+        </Card.Text>
+      </Card.Body>
+      <Card.Footer className="text-muted">Stock disponible: {props.details.stock}</Card.Footer>
+      <Card.Footer>
+                  <small>Precio: {props.details.price} U$S</small>
+                </Card.Footer>
+    </Card>
+    { (amount === 0) ? (
+        
+        <ItemCount stock={props.details.stock} initial={0} onAdd={onAdd} item = {props.details} amount = {amount} />
+          ) : (
+          <> 
+          <div className="d-flex justify-content-center ">                 
+          <Link to={"/cart"}><Button className="ps-2 m-2" variant="dark"size="md">Ir al carrito</Button></Link>                  
+          <Link to ={"/"}><Button className="ps-2 m-2"  variant="dark"size="md">Volver al inicio</Button></Link>
+          </div>
+          </>                  
+          )}
+                  
+
+
+
+
+
+
+
+
+
+
+
+
+        {/* <Container style={{ width: "18rem" }}>
           <Row className="d-flex  mb-5 flex-nowrap">
             <Col>
               <Card style={{ width: "18rem" }}>
@@ -56,7 +102,7 @@ const ItemDetail = ( props ) => {
               </Card>
             </Col>
           </Row>
-        </Container>
+        </Container> */}
       </>
     ) : (
       <>

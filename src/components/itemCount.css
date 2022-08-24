@@ -1,0 +1,17 @@
+.agregarItem{
+    display: flex;
+    justify-content: center;
+    
+
+}
+.count{
+    font-size: 2rem;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.botonMas{
+    padding: 12px;
+    margin-right: 20px;
+}
+

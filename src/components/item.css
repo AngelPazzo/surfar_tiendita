@@ -5,3 +5,7 @@
 .img2 {
     width: 200px;
 }
+
+.card-body {
+    text-align: center;
+}

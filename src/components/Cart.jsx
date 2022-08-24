@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Swal from "sweetalert2";
 import {getFirestore, collection, addDoc} from "firebase/firestore";
+import "./cart.css"
 
 
 
@@ -91,10 +92,10 @@ const Cart = () => {
         <>
         {cartItems.length === 0 ? (
             <>
-            <h3>No hay productos en su carrito!</h3>
-            <div >
+            <h3 className="text-center ">No hay productos en su carrito!</h3>
+            <div className="text-center">
             <Link to={"/"}>
-            <button> Volver</button>
+            <Button className="botonCart " variant="success" > Volver</Button>
             </Link>
             </div>
         </>
@@ -103,8 +104,8 @@ const Cart = () => {
         <div className="cart">
             
 
-            <h2>Cart</h2>
-            <div className="cart-items">
+            <h2 className="text-center ">Sus productos</h2>
+            <div >
                 {cartItems.map((item) => (
                     <CartItem key={item.id} item={item}
                     quantity = {item.item.quantity}
@@ -112,20 +113,20 @@ const Cart = () => {
                     
                 ))}
             </div>
-            <div className="cart-total">
+            <div className="d-flex justify-content-center ">
                 <span>Total: {total} U$S</span>
             </div>
-            <div className="cart-buttons">
+            <div className="d-flex justify-content-center ">
                 <Link to="/">
-                    <Button variant="outline-success">Continue Shopping</Button>
+                    <Button className="botonCart" variant="success">Seguir comprando</Button>
                 </Link>
-                <Button variant="outline-danger" onClick={clearCart}>
-                    Clear Cart
+                <Button className="botonCart" variant="danger" onClick={clearCart}>
+                    Vaciar carrito
                 </Button>
                 
                 
                     
-                    <Button variant="outline-success" onClick={checkout}>Checkout</Button>
+                    <Button className="botonCart" variant="dark" onClick={checkout}>Finalizar compra</Button>
                 
             </div>
         </div>
@@ -141,24 +142,4 @@ export default Cart;
 
 
 
- 
-// const buyItems = (e) => {
-    //     e.preventDefault();
-    //     const name = document.getElementById("name").value; 
-    //     const address = document.getElementById("address").value;
-    //     const email = document.getElementById("email").value;
-        
-    //     const db = getFirebase();
-    //     const orderCollection = collection (db, "orders");
-    //     const data = {
-    //         name,
-    //         address,
-    //         email,
-    //         cartItems,
-    //         total
-    //     }
-    //     addDoc (orderCollection, data).then((res) => {
-    //         console.log(res.id);
-    //     }) 
-    // }
 
